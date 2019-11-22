@@ -35,11 +35,11 @@ If you have a method, which returns a class name, you can use ObjectHelper inste
 use nms\helpers\ObjectHelper;
 
 // instead of using tempotary variable...
-$className = Module::getInstance()->useClass;
+$className = Module::getInstance()->userClass;
 $model = new $className($paramOne, $paramTwo /* Other parameters */);
 
 // ...you can use ObjectHelper
-$model = ObjectHelper::create(Module::getInstance()->useClass, $paramOne, $paramTwo /* Other parameters */);
+$model = ObjectHelper::create(Module::getInstance()->userClass, $paramOne, $paramTwo /* Other parameters */);
 ```
 
 If you want to call static method, you can use ObjectHelper instead of this construction:
@@ -48,10 +48,10 @@ If you want to call static method, you can use ObjectHelper instead of this cons
 use nms\helpers\ObjectHelper;
 
 // instead of this...
-$result = Module::getInstance()->useClass::staticMethod($paramOne, $paramTwo /* Other parameters */);
+$result = Module::getInstance()->userClass::staticMethod($paramOne, $paramTwo /* Other parameters */);
 
 // ...you can use ObjectHelper
-$result = ObjectHelper::call(Module::getInstance()->useClass, 'staticMethod', $paramOne, $paramTwo /* Other parameters */);
+$result = ObjectHelper::call(Module::getInstance()->userClass, 'staticMethod', $paramOne, $paramTwo /* Other parameters */);
 ```
 
 If you want to populate your public class properties you can do it this way:
