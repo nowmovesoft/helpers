@@ -1,6 +1,6 @@
 # Collection of PHP helpers
 
-## Instalation
+## Installation
 
 ### Install via Composer
 
